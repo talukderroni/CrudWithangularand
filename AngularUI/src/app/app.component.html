@@ -1,0 +1,124 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}!
+  </h1>
+  <h3>Hello {{Name}} </h3>
+
+  <div class="container">
+ 
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" [routerLink]="['/']"><strong> {{title}} </strong></a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a [routerLink]="['home']">Home</a></li>
+            <li><a [routerLink]="['product']">Product</a></li>
+            <li><a [routerLink]="['contact']">Contact us</a></li>
+        </ul>
+      </div>
+    </nav>
+     
+     <router-outlet></router-outlet>
+     
+    </div>
+   
+
+
+<button (click)="SaveData()">Save</button>
+<ul> 
+  <li *ngFor="let item of movieList ">
+    {{ item.title }} - {{item.director}}
+  </li>
+</ul>
+
+
+<div class="row" style="text-align:center;">
+
+  <form #contactForm="ngForm" (ngSubmit)="SubmitData(contactForm)">
+ 
+  <p>
+    <label for="firstname">First Name</label>
+    <input type="text"  name="firstname" [(ngModel)]="firstNumber" value="" ngModel>
+  </p>
+ 
+  <p>
+    <label for="lastname">Last Name</label>
+    <input type="text" name="lastname"  value="" ngModel>
+  </p>
+ 
+  <p>
+    <label for="email">Email </label>
+    <input type="text" id="email" name="email" ngModel>
+  </p>
+ 
+  <p>
+    <label for="gender">Geneder</label>
+    <input type="radio" value="male" name="gender" ngModel> Male
+    <input type="radio" value="female" name="gender" ngModel> Female
+  </p>
+ 
+  <p>
+    <label for="isMarried">Married</label>
+    <input type="checkbox" name="isMarried" ngModel>
+  </p>
+ 
+  <select name="country" ngModel>
+    <option [ngValue]="item.Name" *ngFor="let item of CountrtyList" >
+      {{item.Name}}
+    </option>
+  </select>
+ 
+  <p>
+    <button type="submit" [disabled]="false">Submit</button>
+  </p>
+  <p>
+    <label for="firstname">Details Item</label>
+    <input type="text"  name="item"  value="" [(ngModel)]="Item">
+    <button type="button" [disabled]="false" (click)="AddItem()" >Add Item</button>
+  </p>
+ 
+</form>
+</div>
+<div class="row" style="text-align:center;">
+
+
+
+
+
+  <table style="text-align:center;">
+    <thead>
+      <th>Item</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of arr">
+        {{item}}
+    </tr> 
+  </tbody>
+  </table>
+</div>
+
+
+<div class="row" style="text-align:center;">
+
+  firstNumber:<input type="number" value="" [(ngModel)] ="firstNumber"/>
+
+  secondNumer:<input type="number" value="" [(ngModel)] ="secondNumber" (ngModelChange)="AddMethod()"/>
+</div>
+<div class="row" style="text-align:center; margin-top: 20px;">
+  <button (click)="AddMethod()" style="margin-left: 5px;">ADD</button>
+  <button (click)="SubMethod" style="margin-left: 5px;">Sub</button>
+  <button (click)="MultipleMethod()" style="margin-left: 5px;">Multiple</button>
+  <button (click)="DivisionMethod()" style="margin-left: 5px;">Division</button>
+  <button (click)="getObserveData()" style="margin-left: 5px;">Observe</button>
+</div>
+
+<div class="row" style="text-align:center;margin-top: 20px;">
+  Result:<input type="text" value="" [(ngModel)] ="result"/>
+</div>
+<p id="show" *ngIf="!showPara" > show The ParaGraph</p>
+
+<p id="hide" *ngIf="showPara"> Hide The paraGraph Hide</p>
+
+ 
