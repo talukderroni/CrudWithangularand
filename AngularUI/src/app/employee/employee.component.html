@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <br>
+    <a [routerLink]="['/createempPage']" class="btn btn-success">Create itemloyee</a>
+
+  <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>City</th>
+        <th>Department</th>
+        <th>Gender</th>
+     
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of employeelist;let i=index">
+        <td>{{i+1}}</td>  
+        <td>{{item.city}}</td>  
+        <td>{{ item.name }}</td>  
+        <td>{{ item.city }}</td>  
+        <td>{{ item.department }}</td>  
+        <td>{{ item.gender }}</td>  
+        <td>  
+            <a [routerLink]="['/itemloyee/edit/', item.id]">Edit</a> |  
+            <a [routerLink]="" (click)="deleteEmployee(item.id)">Delete</a>  
+        </td>  
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+</body>
+</html>
