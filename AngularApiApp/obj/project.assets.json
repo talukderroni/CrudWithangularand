@@ -8932,11 +8932,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Talukder\\Angular Tutorial\\AngularApiApp\\AngularApiApp.csproj",
+      "projectUniqueName": "E:\\Talukder\\Angular Tutorial\\AngularCrudWithDotNetCore\\AngularApiApp\\AngularApiApp.csproj",
       "projectName": "AngularApiApp",
-      "projectPath": "E:\\Talukder\\Angular Tutorial\\AngularApiApp\\AngularApiApp.csproj",
+      "projectPath": "E:\\Talukder\\Angular Tutorial\\AngularCrudWithDotNetCore\\AngularApiApp\\AngularApiApp.csproj",
       "packagesPath": "C:\\Users\\Yunus\\.nuget\\packages\\",
-      "outputPath": "E:\\Talukder\\Angular Tutorial\\AngularApiApp\\obj\\",
+      "outputPath": "E:\\Talukder\\Angular Tutorial\\AngularCrudWithDotNetCore\\AngularApiApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -10,19 +10,22 @@ import { HttpClientModule } from '@angular/common/http';
 import { appRoutes } from './app.routeall';
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
 import { observable } from 'rxjs';
+import { OrderDetailsComponent } from './order-details/order-details.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeComponent,
-    CreateEmployeeComponent
+    CreateEmployeeComponent,
+    OrderDetailsComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
-    
+    ReactiveFormsModule,
     RouterModule.forRoot(appRoutes)        
   ],
   providers: [],
